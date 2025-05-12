@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Types in Python & MySQL</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Data Types in Python & MySQL</h1>
+        <div class="school-colors">
+            <div class="color-box navy"></div>
+            <div class="color-box gold"></div>
+        </div>
+    </header>
+
+    <main>
+        <section id="exercise1" class="exercise">
+            <h2>Exercise 1 – Identify Python Data Types</h2>
+            <div class="code-snippet">
+                <pre><code>a = 42
+b = "Hello"
+c = 3.14
+d = True</code></pre>
+            </div>
+            <div class="questions">
+                <div class="question">
+                    <p>1. What is the type of <code>a</code>?</p>
+                    <select class="answer-dropdown">
+                        <option value="">Select answer</option>
+                        <option value="int">int</option>
+                        <option value="str">str</option>
+                        <option value="float">float</option>
+                        <option value="bool">bool</option>
+                    </select>
+                    <button class="check-answer">Check</button>
+                    <p class="feedback hidden">Correct! <code>a</code> is an integer because it's a whole number.</p>
+                </div>
+                <div class="question">
+                    <p>2. Is <code>b</code> a string or integer?</p>
+                    <select class="answer-dropdown">
+                        <option value="">Select answer</option>
+                        <option value="string">String</option>
+                        <option value="integer">Integer</option>
+                    </select>
+                    <button class="check-answer">Check</button>
+                    <p class="feedback hidden">Correct! <code>b</code> is a string because it's enclosed in quotes.</p>
+                </div>
+                <div class="question">
+                    <p>3. Which variable holds a floating-point number?</p>
+                    <select class="answer-dropdown">
+                        <option value="">Select answer</option>
+                        <option value="a">a</option>
+                        <option value="b">b</option>
+                        <option value="c">c</option>
+                        <option value="d">d</option>
+                    </select>
+                    <button class="check-answer">Check</button>
+                    <p class="feedback hidden">Correct! <code>c</code> is a float because it has a decimal point.</p>
+                </div>
+                <div class="question">
+                    <p>4. What is the value of <code>d</code>?</p>
+                    <select class="answer-dropdown">
+                        <option value="">Select answer</option>
+                        <option value="True">True</option>
+                        <option value="False">False</option>
+                        <option value="1">1</option>
+                        <option value="0">0</option>
+                    </select>
+                    <button class="check-answer">Check</button>
+                    <p class="feedback hidden">Correct! <code>d</code> is explicitly set to <code>True</code>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="exercise2" class="exercise">
+            <h2>Exercise 2 – Identify MySQL Data Types</h2>
+            <div class="code-snippet">
+                <pre><code>SET @age = 25;
+SET @name = 'Alice';
+SET @price = 9.99;
+SET @is_active = TRUE;</code></pre>
+            </div>
+            <div class="questions">
+                <div class="question">
+                    <p>1. What data type is <code>@age</code>?</p>
+                    <select class="answer-dropdown">
+                        <option value="">Select answer</option>
+                        <option value="INT">INT</option>
+                        <option value="VARCHAR">VARCHAR</option>
+                        <option value="FLOAT">FLOAT</option>
+                        <option value="BOOLEAN">BOOLEAN</option>
+                    </select>
+                    <button class="check-answer">Check</button>
+                    <p class="feedback hidden">Correct! <code>@age</code> is an integer because it's a whole number.</p>
+                </div>
+                <div class="question">
+                    <p>2. Is <code>@name</code> a <code>VARCHAR</code> or <code>INT</code>?</p>
+                    <select class="answer-dropdown">
+                        <option value="">Select answer</option>
+                        <option value="VARCHAR">VARCHAR</option>
+                        <option value="INT">INT</option>
+                    </select>
+                    <button class="check-answer">Check</button>
+                    <p class="feedback hidden">Correct! <code>@name</code> is a VARCHAR (string) because it's text in quotes.</p>
+                </div>
+                <div class="question">
+                    <p>3. Which variable is a <code>FLOAT</code>?</p>
+                    <select class="answer-dropdown">
+                        <option value="">Select answer</option>
+                        <option value="@age">@age</option>
+                        <option value="@name">@name</option>
+                        <option value="@price">@price</option>
+                        <option value="@is_active">@is_active</option>
+                    </select>
+                    <button class="check-answer">Check</button>
+                    <p class="feedback hidden">Correct! <code>@price</code> is a FLOAT because it has decimal places.</p>
+                </div>
+                <div class="question">
+                    <p>4. How is <code>@is_active</code> stored in MySQL?</p>
+                    <select class="answer-dropdown">
+                        <option value="">Select answer</option>
+                        <option value="TINYINT(1)">TINYINT(1)</option>
+                        <option value="BOOLEAN">BOOLEAN</option>
+                        <option value="INT">INT</option>
+                        <option value="VARCHAR">VARCHAR</option>
+                    </select>
+                    <button class="check-answer">Check</button>
+                    <p class="feedback hidden">Correct! MySQL stores BOOLEAN as TINYINT(1) where 1 is TRUE and 0 is FALSE.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="exercise3" class="exercise">
+            <h2>Exercise 3 – Type Errors in Python</h2>
+            <div class="code-snippet">
+                <pre><code>x = "5"
+y = x + 2  # What happens here?</code></pre>
+            </div>
+            <div class="question">
+                <p>Why does this fail?</p>
+                <div class="answer-options">
+                    <label><input type="radio" name="type-error" value="weak"> Because Python is weakly typed</label>
+                    <label><input type="radio" name="type-error" value="strong"> Because Python is strongly typed</label>
+                    <label><input type="radio" name="type-error" value="dynamic"> Because Python is dynamically typed</label>
+                    <label><input type="radio" name="type-error" value="static"> Because Python is statically typed</label>
+                </div>
+                <button class="check-answer">Check</button>
+                <p class="feedback hidden">Correct! Python is strongly typed and won't implicitly convert between strings and numbers.</p>
+            </div>
+            <div class="solution">
+                <h3>Fix:</h3>
+                <div class="code-snippet">
+                    <pre><code>y = int(x) + 2  # Explicit conversion.</code></pre>
+                </div>
+                <button class="try-it">Try it in Python</button>
+                <div class="output hidden"></div>
+            </div>
+        </section>
+
+        <section id="exercise4" class="exercise">
+            <h2>Exercise 4 – Type Casting in MySQL</h2>
+            <div class="code-snippet">
+                <pre><code>SELECT '10' + 5;  -- What is the result?</code></pre>
+            </div>
+            <div class="question">
+                <p>What will this return?</p>
+                <div class="answer-options">
+                    <label><input type="radio" name="mysql-cast" value="105"> '105'</label>
+                    <label><input type="radio" name="mysql-cast" value="15"> 15</label>
+                    <label><input type="radio" name="mysql-cast" value="error"> Error</label>
+                    <label><input type="radio" name="mysql-cast" value="10"> 10</label>
+                </div>
+                <button class="check-answer">Check</button>
+                <p class="feedback hidden">Correct! MySQL weakly types and implicitly converts '10' to INT before adding.</p>
+            </div>
+        </section>
+
+        <section id="comparison-tables">
+            <h2>Data Type Comparison</h2>
+            <div class="tabs">
+                <button class="tab-button active" data-tab="basic">Basic Types</button>
+                <button class="tab-button" data-tab="complex">Complex Types</button>
+                <button class="tab-button" data-tab="typing">Typing Systems</button>
+            </div>
+            
+            <div class="tab-content active" id="basic">
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Python</th>
+                        <th>MySQL</th>
+                    </tr>
+                    <tr>
+                        <td>Integer</td>
+                        <td><code>int</code></td>
+                        <td><code>INT</code></td>
+                    </tr>
+                    <tr>
+                        <td>Decimal</td>
+                        <td><code>float</code></td>
+                        <td><code>FLOAT/DOUBLE</code></td>
+                    </tr>
+                    <tr>
+                        <td>Text</td>
+                        <td><code>str</code></td>
+                        <td><code>VARCHAR/TEXT</code></td>
+                    </tr>
+                    <tr>
+                        <td>Boolean</td>
+                        <td><code>bool</code></td>
+                        <td><code>BOOLEAN</code> (as <code>TINYINT(1)</code>)</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="tab-content" id="complex">
+                <table>
+                    <tr>
+                        <th>Category</th>
+                        <th>Python</th>
+                        <th>MySQL</th>
+                    </tr>
+                    <tr>
+                        <td>List/Array</td>
+                        <td><code>list</code></td>
+                        <td>No direct equivalent (use <code>JSON</code>)</td>
+                    </tr>
+                    <tr>
+                        <td>Key-Value Pairs</td>
+                        <td><code>dict</code></td>
+                        <td><code>JSON</code></td>
+                    </tr>
+                    <tr>
+                        <td>Fixed Collection</td>
+                        <td><code>tuple</code></td>
+                        <td><code>ENUM</code></td>
+                    </tr>
+                </table>
+            </div>
+            
+            <div class="tab-content" id="typing">
+                <table>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Python (Dynamic)</th>
+                        <th>MySQL (Static)</th>
+                    </tr>
+                    <tr>
+                        <td>Type Checking</td>
+                        <td>At runtime</td>
+                        <td>At schema definition</td>
+                    </tr>
+                    <tr>
+                        <td>Flexibility</td>
+                        <td>High (no type declarations)</td>
+                        <td>Low (fixed column types)</td>
+                    </tr>
+                    <tr>
+                        <td>Example</td>
+                        <td><code>x = 10</code> (type inferred)</td>
+                        <td><code>INT age</code> (explicit)</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <section id="review-questions">
+            <h2>Review Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-button">1. What is the difference between <code>INT</code> in MySQL and <code>int</code> in Python?</button>
+                    <div class="accordion-content">
+                        <p>MySQL <code>INT</code> is <strong>statically typed</strong> (fixed at declaration). Python <code>int</code> is <strong>dynamically inferred</strong> (can reassign to other types).</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">2. Why does <code>'5' + 2</code> work in MySQL but not in Python?</button>
+                    <div class="accordion-content">
+                        <p>MySQL <strong>weakly types</strong> → converts <code>'5'</code> to <code>INT</code>. Python <strong>strongly types</strong> → requires explicit conversion (<code>int('5') + 2</code>).</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">3. How would you store a list of items in MySQL?</button>
+                    <div class="accordion-content">
+                        <p>Use <code>JSON</code> or a separate table with foreign keys.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-button">4. What is the MySQL equivalent of Python's <code>dict</code>?</button>
+                    <div class="accordion-content">
+                        <p>The <code>JSON</code> data type (stores key-value pairs).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="case-studies">
+            <h2>Case Studies</h2>
+            <div class="case-study">
+                <h3>Python Dictionary</h3>
+                <div class="code-snippet">
+                    <pre><code>product = {
+    "name": "Laptop",
+    "price": 999.99,
+    "in_stock": True
+}</code></pre>
+                </div>
+                <div class="questions">
+                    <div class="question">
+                        <p>1. What is the type of <code>product</code>?</p>
+                        <input type="text" class="answer-input" placeholder="Enter your answer">
+                        <button class="check-answer">Check</button>
+                        <p class="feedback hidden">Correct! <code>product</code> is a dictionary (<code>dict</code>) because it uses key-value pairs.</p>
+                    </div>
+                    <div class="question">
+                        <p>2. How would you access the price?</p>
+                        <input type="text" class="answer-input" placeholder="Enter your answer">
+                        <button class="check-answer">Check</button>
+                        <p class="feedback hidden">Correct! Use <code>product["price"]</code> to access the value.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="case-study">
+                <h3>MySQL Table</h3>
+                <div class="code-snippet">
+                    <pre><code>CREATE TABLE users (
+    id INT PRIMARY KEY,
+    username VARCHAR(50),
+    is_premium BOOLEAN
+);</code></pre>
+                </div>
+                <div class="questions">
+                    <div class="question">
+                        <p>1. What type is <code>is_premium</code>?</p>
+                        <input type="text" class="answer-input" placeholder="Enter your answer">
+                        <button class="check-answer">Check</button>
+                        <p class="feedback hidden">Correct! <code>is_premium</code> is a BOOLEAN (stored as TINYINT(1)).</p>
+                    </div>
+                    <div class="question">
+                        <p>2. How would you insert <code>FALSE</code>?</p>
+                        <div class="code-snippet">
+                            <pre><code>INSERT INTO users (id, username, is_premium) VALUES (1, 'Alice', <input type="text" class="inline-answer" placeholder="?">);</code></pre>
+                        </div>
+                        <button class="check-answer">Check</button>
+                        <p class="feedback hidden">Correct! Use <code>FALSE</code> or <code>0</code> to insert a false value.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Western Pacific University - IT Academic Department</p>
+        <p>Instructor: Mr. Eremas Tade</p>
+    </footer>
+</body>
+</html>
